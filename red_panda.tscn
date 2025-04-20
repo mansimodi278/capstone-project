@@ -1,29 +1,51 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc2kuhpel4wvr"]
+[gd_scene load_steps=8 format=3 uid="uid://dc2kuhpel4wvr"]
 
 [ext_resource type="Texture2D" uid="uid://cud6wh7smgnfl" path="res://Red Panda Sprite Sheet.png" id="1_oduq5"]
 
-[sub_resource type="Animation" id="Animation_vu8xq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmk7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hu6t"]
+size = Vector2(123, 152.5)
+
+[sub_resource type="Animation" id="Animation_c1s4x"]
 resource_name = "jump"
-length = 0.5
+length = 13.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.4, 1.76667, 3.76667, 5.06667, 6.53333, 7.63333, 8.43333, 8.96667, 9.9, 12.3, 13.7667, 15.5333, 17.1333, 18.4333, 20.2333, 21.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.366667, 1.13333, 1.93333, 2.7, 3.5, 4.26667, 4.9, 5.63333, 6.36667, 7.1, 7.7, 8.5, 9.3, 10.1, 10.8333, 11.5333, 12.3333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+"values": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
 }
 
-[sub_resource type="Animation" id="Animation_e4ap0"]
+[sub_resource type="Animation" id="Animation_ntbjx"]
+resource_name = "tail"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333334, 0.7, 1.46667, 2.2, 2.9, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_iu8av"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -33,35 +55,33 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_8j0qm"]
-resource_name = "tail "
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.366667, 1.66667, 3.26667, 4.93333, 6.96667, 8.86667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_o60kk"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y64h8"]
 _data = {
-"RESET": SubResource("Animation_e4ap0"),
-"jump": SubResource("Animation_vu8xq"),
-"tail ": SubResource("Animation_8j0qm")
+"RESET": SubResource("Animation_iu8av"),
+"jump": SubResource("Animation_c1s4x"),
+"tail": SubResource("Animation_ntbjx")
 }
 
-[node name="red panda" type="Sprite2D"]
+[node name="red panda" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mmk7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(500.5, 608.75)
+shape = SubResource("RectangleShape2D_7hu6t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CollisionShape2D")
+libraries = {
+"": SubResource("AnimationLibrary_y64h8")
+}
+speed_scale = 3.0
+
+[node name="RedPandaSpriteSheet" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(505.084, 524.324)
+scale = Vector2(5.56775, 9.27026)
 texture = ExtResource("1_oduq5")
 hframes = 8
 vframes = 7
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_o60kk")
-}
