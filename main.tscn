@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://dypxpiatnfilb"]
+[gd_scene load_steps=2 format=3 uid="uid://itn6ibtinr2q"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cvru8gufu0dv2" path="res://_Complete_static_BG_(288 x 208).png" id="1_jasa6"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="main" type="Node2D"]
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
+
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="."]
+position = Vector2(-871, -1264)
+scale = Vector2(3.01042, 4.5)
+texture = ExtResource("1_jasa6")
+offset = Vector2(432, 384)
