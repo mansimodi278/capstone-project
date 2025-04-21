@@ -8,10 +8,11 @@
 [node name="background" type="Sprite2D" parent="."]
 
 [node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="."]
-position = Vector2(-867, -1260)
-scale = Vector2(3.01042, 4.5)
+position = Vector2(-1461, -1521)
+scale = Vector2(5.09722, 5.43269)
 texture = ExtResource("1_jasa6")
 offset = Vector2(432, 384)
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(-368, 170)
+position = Vector2(109, 708)
+jump_force = 700

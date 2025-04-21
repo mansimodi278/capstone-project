@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc2kuhpel4wvr"]
+[gd_scene load_steps=10 format=3 uid="uid://dc2kuhpel4wvr"]
 
 [ext_resource type="Texture2D" uid="uid://cud6wh7smgnfl" path="res://Red Panda Sprite Sheet.png" id="1_oduq5"]
 [ext_resource type="Script" path="res://scripts/red_panda.gd" id="1_t0dox"]
@@ -56,21 +56,42 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
+[sub_resource type="Animation" id="Animation_keiqy"]
+resource_name = "fall"
+length = 14.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 1.23333, 2.4, 3.43333, 4.56667, 5.53333, 6.6, 7.5, 8.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [47, 48, 49, 50, 51, 52, 53, 54, 55]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y64h8"]
 _data = {
 "RESET": SubResource("Animation_iu8av"),
+"fall": SubResource("Animation_keiqy"),
 "jump": SubResource("Animation_c1s4x"),
 "tail": SubResource("Animation_ntbjx")
 }
 
 [node name="red panda" type="CharacterBody2D"]
 script = ExtResource("1_t0dox")
+speed = null
+gravity = null
+jump_force = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mmk7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(500.5, 608.75)
+position = Vector2(452, 172)
 shape = SubResource("RectangleShape2D_7hu6t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -78,12 +99,16 @@ root_node = NodePath("../CollisionShape2D")
 libraries = {
 "": SubResource("AnimationLibrary_y64h8")
 }
-speed_scale = 3.0
+speed_scale = 4.0
 
 [node name="RedPandaSpriteSheet" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(505.084, 524.324)
+position = Vector2(455, 90.0001)
 scale = Vector2(5.56775, 9.27026)
 texture = ExtResource("1_oduq5")
 hframes = 8
 vframes = 7
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(442, 2)
+scale = Vector2(5.56775, 9.27026)
