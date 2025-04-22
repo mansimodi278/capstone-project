@@ -1,20 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=5 format=3 uid="uid://itn6ibtinr2q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4acse"]
-[ext_resource type="Texture2D" uid="uid://cvru8gufu0dv2" path="res://_Complete_static_BG_(288 x 208).png" id="1_jasa6"]
+[ext_resource type="Texture2D" uid="uid://dahjlu3iy7xdn" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="2_1gyeq"]
 [ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_pbdhr"]
+[ext_resource type="PackedScene" uid="uid://ohepd14qsj0v" path="res://ground.tscn" id="4_wteke"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_4acse")
 
-[node name="background" type="Sprite2D" parent="."]
-
-[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="."]
-position = Vector2(-1461, -1521)
-scale = Vector2(5.09722, 5.43269)
-texture = ExtResource("1_jasa6")
-offset = Vector2(432, 384)
-
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(109, 708)
-jump_force = 700
+position = Vector2(49, 232)
+
+[node name="ground" parent="." instance=ExtResource("4_wteke")]
+position = Vector2(-6, 4)
+
+[node name="ParallaxLayer" type="Parallax2D" parent="."]
+repeat_size = Vector2(1038, 0)
+repeat_times = 5
+
+[node name="background" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(510, 253.625)
+scale = Vector2(3.61111, 3.03245)
+texture = ExtResource("2_1gyeq")

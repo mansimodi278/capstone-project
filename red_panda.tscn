@@ -83,9 +83,6 @@ _data = {
 
 [node name="red panda" type="CharacterBody2D"]
 script = ExtResource("1_t0dox")
-speed = null
-gravity = null
-jump_force = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mmk7n")
@@ -110,5 +107,5 @@ hframes = 8
 vframes = 7
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(442, 2)
+position = Vector2(442, 23)
 scale = Vector2(5.56775, 9.27026)

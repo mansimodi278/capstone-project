@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvru8gufu0dv2"
-path="res://.godot/imported/_Complete_static_BG_(288 x 208).png-0ed4e38b72c27e889472c2d3a7872418.ctex"
+uid="uid://djfv4q0s8bt4m"
+path="res://.godot/imported/3 - Cloud_cover_1.png-e8220525219d9c0a77081c16d9c0c995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_Complete_static_BG_(288 x 208).png"
-dest_files=["res://.godot/imported/_Complete_static_BG_(288 x 208).png-0ed4e38b72c27e889472c2d3a7872418.ctex"]
+source_file="res://Seasonal Tilesets-2/1 - Grassland/Background parts/3 - Cloud_cover_1.png"
+dest_files=["res://.godot/imported/3 - Cloud_cover_1.png-e8220525219d9c0a77081c16d9c0c995.ctex"]
 
 [params]
 
