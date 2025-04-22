@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=4 format=3 uid="uid://itn6ibtinr2q"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_4acse"]
 [ext_resource type="Texture2D" uid="uid://cvru8gufu0dv2" path="res://_Complete_static_BG_(288 x 208).png" id="1_jasa6"]
 [ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_pbdhr"]
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_4acse")
 
 [node name="background" type="Sprite2D" parent="."]
 

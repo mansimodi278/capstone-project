@@ -15,21 +15,23 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 		
+		var horizontal_direction = Input.get_axis("move_left ", "move_right")
+	velocity.x = speed * horizontal_direction
+		
 	var animation = "tail"
-	if abs(input_vector.x) > 0:
+	if velocity.y < 0:
 		animation = "jump"
-	if velocity.y < 0 && !is_on_floor():
-		animation = "jump"
-		
-		if velocity.y > 0 && !is_on_floor():
+	elif velocity.y > 0 and !is_on_floor():
 		animation = "fall"
-		
+	elif abs(velocity.x) > 0 and is_on_floor():
+		if velocity.y > 0 and !is_on_floor():
+		animation = "run"
+	else:
+		animation = "tail"
 		animation_player.play(animation)
 		
 		
-	var horizontal_direction = Input.get_axis("move_left ", "move_right")
 	
-	velocity.x = speed * horizontal_direction
 	
 	move_and_slide()
 	
