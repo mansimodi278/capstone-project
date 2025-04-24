@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6ppacf4ay6pf"]
+
+[ext_resource type="Texture2D" uid="uid://dflkjvlr45ihd" path="res://Seasonal Tilesets-2/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" id="1_l48ng"]
+[ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_xuf2h"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(588, 352)
+scale = Vector2(4.125, 3.45192)
+texture = ExtResource("1_l48ng")
+
+[node name="red panda" parent="." instance=ExtResource("2_xuf2h")]
+position = Vector2(57, 371)
