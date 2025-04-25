@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://djxaob4xvnqph"]
+
+[ext_resource type="Texture2D" uid="uid://dkqe87or6eklu" path="res://Seasonal Tilesets-2/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_1x4ov"]
+[ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_7fifk"]
+
+[node name="main winter" type="Node2D"]
+
+[node name="parallax" type="Node2D" parent="."]
+position = Vector2(-1, 1)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="parallax"]
+
+[node name="ParallaxLayer" type="Parallax2D" parent="parallax/ParallaxBackground"]
+scroll_offset = Vector2(-140, -14)
+repeat_size = Vector2(1187, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="parallax/ParallaxBackground/ParallaxLayer"]
+position = Vector2(1863, 781)
+scale = Vector2(6.02778, 7.32692)
+texture = ExtResource("1_1x4ov")
+
+[node name="red panda" parent="." instance=ExtResource("2_7fifk")]
+position = Vector2(-1295, 1040)

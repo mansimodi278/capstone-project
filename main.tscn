@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=12 format=4 uid="uid://itn6ibtinr2q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4acse"]
 [ext_resource type="Texture2D" uid="uid://dahjlu3iy7xdn" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" id="2_1gyeq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ct0fx7cirmgqs" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/Platformer_Tileset_1.png" id="3_0humg"]
 [ext_resource type="PackedScene" uid="uid://ohepd14qsj0v" path="res://ground.tscn" id="4_wteke"]
 [ext_resource type="Texture2D" uid="uid://byk7ppqfcdvqx" path="res://Seasonal Tilesets-2/1 - Grassland/Grassland_entities (16 x 16).png" id="6_0agbr"]
+[ext_resource type="Texture2D" uid="uid://oqr2lm73f8vm" path="res://Seasonal Tilesets-2/1 - Grassland/Extra_plants (16 x 16).png" id="6_0yxdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hql18"]
 texture = ExtResource("3_0humg")
@@ -155,15 +156,37 @@ texture = ExtResource("6_0agbr")
 16:5/0 = 0
 18:5/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_60us6"]
+texture = ExtResource("6_0yxdu")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_i8hrk"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hql18")
 sources/1 = SubResource("TileSetAtlasSource_a5807")
+sources/2 = SubResource("TileSetAtlasSource_60us6")
 
-[node name="main" type="Node2D"]
+[node name="main summer" type="Node2D"]
 script = ExtResource("1_4acse")
 
 [node name="ground" parent="." instance=ExtResource("4_wteke")]
+position = Vector2(-10, 99)
 
 [node name="Parallax" type="Node2D" parent="."]
 
@@ -176,16 +199,18 @@ repeat_times = 5
 
 [node name="background" type="Sprite2D" parent="Parallax/ParallaxLayer"]
 texture_filter = 1
-position = Vector2(358, 381)
+position = Vector2(309, 377)
 scale = Vector2(3.61111, 3.03245)
 texture = ExtResource("2_1gyeq")
 centered = false
 
-[node name="red panda" parent="Parallax" instance=ExtResource("2_pbdhr")]
-position = Vector2(-1905, 752)
-
 [node name="platforms" type="TileMapLayer" parent="."]
 use_parent_material = true
 position = Vector2(-195, 106)
-tile_map_data = PackedByteArray("AACp/zMAAAACAAUAAAC4/zMAAAACAAUAAACr/zMAAAADAAUAAACq/zMAAAADAAUAAACy/zMAAAAEAAMAAACn/zMAAAAEAAMAAACg/y4AAAABAAIAAACh/y4AAAACAAIAAACi/y4AAAADAAIAAACe/zIAAAABAAIAAACf/zIAAAACAAIAAACg/zIAAAADAAIAAACs/yoAAAABAAIAAACt/yoAAAACAAIAAACu/yoAAAADAAIAAACz/yIAAAABAAIAAAC0/yIAAAACAAIAAAC1/yIAAAADAAIAAAC8/yoAAAABAAIAAAC9/yoAAAACAAIAAAC+/yoAAAADAAIAAADE/x4AAAABAAIAAADF/x4AAAACAAIAAADG/x4AAAADAAIAAADK/ykAAAABAAIAAADL/ykAAAACAAIAAADM/ykAAAADAAIAAADA/yUAAAABAAIAAADB/yUAAAACAAIAAADC/yUAAAADAAIAAADO/yEAAAABAAIAAADP/yEAAAACAAIAAADQ/yEAAAADAAIAAADO/xYAAAABAAIAAADP/xYAAAACAAIAAADQ/xYAAAADAAIAAADS/zIAAAABAAIAAADT/zIAAAACAAIAAADU/zIAAAADAAIAAACa/zMAAQAFAAUAAACb/zMAAQAGAAUAAACc/zMAAQAHAAUAAACb/zIAAQADAAUAAAA=")
+tile_map_data = PackedByteArray("AACp/zMAAAACAAUAAAC4/zMAAAACAAUAAACr/zMAAAADAAUAAACq/zMAAAADAAUAAACn/zMAAAAEAAMAAACg/y4AAAABAAIAAACh/y4AAAACAAIAAACi/y4AAAADAAIAAACe/zIAAAABAAIAAACf/zIAAAACAAIAAACg/zIAAAADAAIAAACs/yoAAAABAAIAAACt/yoAAAACAAIAAACu/yoAAAADAAIAAADK/ykAAAABAAIAAADL/ykAAAACAAIAAADM/ykAAAADAAIAAACa/zMAAQAFAAUAAACb/zMAAQAGAAUAAACc/zMAAQAHAAUAAACb/zIAAQADAAUAAACt/zMAAQAJAAMAAACw/zEAAQAJAAEAAAC7/zEAAQAHAAEAAACh/zMAAAAEAAMAAACo/zMAAAAAAAQAAAC1/zMAAAAAAAQAAACu/ykAAAACAAUAAAC9/zMAAAACAAUAAACp/yUAAAAAAAEAAACq/yUAAAABAAEAAACr/yUAAAACAAEAAACs/yUAAAADAAEAAACt/yUAAAAEAAEAAACq/yQAAAABAAAAAACr/yQAAAACAAAAAACs/yQAAAADAAAAAACz/ysAAAAAAAEAAAC0/ysAAAABAAEAAAC1/ysAAAACAAEAAAC2/ysAAAADAAEAAAC3/ysAAAAEAAEAAAC0/yoAAAABAAAAAAC1/yoAAAACAAAAAAC2/yoAAAADAAAAAADG/zMAAAAEAAMAAACX/zMAAQAFAAUAAACY/zMAAQAGAAUAAACZ/zMAAQAHAAUAAACw/zIAAQAJAAIAAACw/zMAAQAJAAMAAACx/zEAAQAKAAEAAACx/zIAAQAKAAIAAACx/zMAAQAKAAMAAACy/zEAAQALAAEAAACy/zIAAQALAAIAAACy/zMAAQALAAMAAADI/zMAAQAFAAUAAADJ/zMAAQAGAAUAAADK/zMAAQAHAAUAAAC2/yMAAAABAAIAAAC3/yMAAAACAAIAAAC4/yMAAAADAAIAAADG/yUAAAABAAIAAADH/yUAAAACAAIAAADI/yUAAAADAAIAAADL/x8AAAABAAIAAADM/x8AAAACAAIAAADN/x8AAAADAAIAAADB/yMAAAABAAIAAADC/yMAAAACAAIAAADD/yMAAAADAAIAAACw/xgAAAABAAIAAACx/xgAAAACAAIAAACy/xgAAAADAAIAAADe/yEAAAABAAIAAADf/yEAAAACAAIAAADg/yEAAAADAAIAAADj/xwAAAABAAIAAADk/xwAAAACAAIAAADl/xwAAAADAAIAAAA=")
 tile_set = SubResource("TileSet_i8hrk")
+
+[node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
+position = Vector2(-1701, 819)
+motion_mode = 1
+slide_on_ceiling = false
