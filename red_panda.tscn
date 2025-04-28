@@ -82,7 +82,7 @@ _data = {
 "tail": SubResource("Animation_ntbjx")
 }
 
-[node name="red panda" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(0.3, 0.3)
 up_direction = Vector2(0, 1)
 script = ExtResource("1_t0dox")
@@ -91,7 +91,7 @@ script = ExtResource("1_t0dox")
 sprite_frames = SubResource("SpriteFrames_mmk7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(326.667, 373.281)
+position = Vector2(36.6667, 186.667)
 scale = Vector2(4, 4)
 shape = SubResource("CapsuleShape2D_hdlpg")
 
@@ -100,11 +100,12 @@ root_node = NodePath("../CollisionShape2D")
 libraries = {
 "": SubResource("AnimationLibrary_y64h8")
 }
+autoplay = "tail"
 speed_scale = 4.0
 
 [node name="RedPandaSpriteSheet" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(366.667, -40)
+position = Vector2(63.3333, -226.667)
 scale = Vector2(39.9147, 42.9296)
 texture = ExtResource("1_oduq5")
 hframes = 8
