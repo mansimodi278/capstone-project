@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dflkjvlr45ihd" path="res://Seasonal Tilesets-2/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" id="1_l48ng"]
 [ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_xuf2h"]
-[ext_resource type="Texture2D" uid="uid://dkqe87or6eklu" path="res://Seasonal Tilesets-2/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="3_he6q1"]
-[ext_resource type="Texture2D" uid="uid://dd03fkq6ksyut" path="res://Platformer_Tileset_1.png" id="3_sffuq"]
+[ext_resource type="Texture2D" path="res://Seasonal Tilesets-2/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="3_he6q1"]
+[ext_resource type="Texture2D" path="res://Platformer_Tileset_1.png" id="3_sffuq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hj525"]
 texture = ExtResource("3_sffuq")

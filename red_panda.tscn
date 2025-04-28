@@ -5,8 +5,9 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mmk7n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hu6t"]
-size = Vector2(226.667, 216.25)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hdlpg"]
+radius = 112.5
+height = 246.667
 
 [sub_resource type="Animation" id="Animation_iu8av"]
 length = 0.001
@@ -90,9 +91,9 @@ script = ExtResource("1_t0dox")
 sprite_frames = SubResource("SpriteFrames_mmk7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(326.667, 254.062)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_7hu6t")
+position = Vector2(326.667, 373.281)
+scale = Vector2(4, 4)
+shape = SubResource("CapsuleShape2D_hdlpg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../CollisionShape2D")
@@ -103,13 +104,13 @@ speed_scale = 4.0
 
 [node name="RedPandaSpriteSheet" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(332, 163)
-scale = Vector2(5.56775, 9.27026)
+position = Vector2(366.667, -40)
+scale = Vector2(39.9147, 42.9296)
 texture = ExtResource("1_oduq5")
 hframes = 8
 vframes = 7
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(442, 23)
-scale = Vector2(5.56775, 9.27026)
-zoom = Vector2(1.7, 1.7)
+position = Vector2(340, 420)
+scale = Vector2(3, 3)
+position_smoothing_enabled = true
