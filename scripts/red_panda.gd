@@ -31,8 +31,7 @@ func _physics_process(delta):
 		animation = "tail"
 	animation_player.play(animation)
 		
-		
-	
+
 	
 	move_and_slide()
 	

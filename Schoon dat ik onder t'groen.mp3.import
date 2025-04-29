@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8kukylwajeyu"
+path="res://.godot/imported/Schoon dat ik onder t'groen.mp3-08fc13ce9acadaafa98f651cc6138814.mp3str"
+
+[deps]
+
+source_file="res://Schoon dat ik onder t'groen.mp3"
+dest_files=["res://.godot/imported/Schoon dat ik onder t'groen.mp3-08fc13ce9acadaafa98f651cc6138814.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

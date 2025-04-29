@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt1vxgi2d463p"]
+
+[ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="1_rglcy"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_rglcy")
