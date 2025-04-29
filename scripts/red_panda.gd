@@ -1,21 +1,39 @@
 extends CharacterBody2D
 
-const speed = 550
-const jump_power = -2000
+@export var speed = 300
+@export var gravity = 30
+@export var jump_force = 600
 
-const acc = 50
-const friction = 70
-
-const gravity = 120 
+@onready var animation_player = $AnimationPlayer
 
 func _physics_process(delta):
-	pass 
+	if !is_on_floor():
+		velocity.y += gravity
+		if velocity.y > 1000:
+			velocity.y = 1000
+			
+	if Input.is_action_just_pressed("jump"):
+		velocity.y = -jump_force
+		print ("jump")
+		
+	var horizontal_direction = Input.get_axis("move_left ", "move_right")
+	velocity.x = speed * horizontal_direction
+		
+	var animation = "tail"
+	if velocity.y < 0:
+		animation = "jump"
+	elif velocity.y > 1 and !is_on_floor():
+		animation = "fall"
+	elif abs(velocity.x) > 0 and is_on_floor():
+		animation = "run"
+			
+	else:
+		animation = "tail"
+	animation_player.play(animation)
+		
+		
 	
-func input() -> Vector2:
-	var input_dir = Vector2.ZERO
 	
-	input_dir.x =  Input.get_axis("ui_left","ui_right")
-	input_dir = input_dir.normalized()
-	return input_dir
+	move_and_slide()
 	
-func accelerate(direction):
+	print(velocity)
