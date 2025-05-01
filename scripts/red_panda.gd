@@ -37,4 +37,6 @@ func _physics_process(delta):
 	
 	print(velocity)
 	
-	
+func game_over(body: Node2D) -> void:
+	print("GAME OVER CALLED")
+	get_tree().call_deferred("reload_current_scene")
