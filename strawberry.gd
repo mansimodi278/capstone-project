@@ -10,8 +10,8 @@ func _ready():
 func _on_body_entered(body): 
 	if body.name == "red panda":
 		Global.score += value
+		Global. update_score.emit()
 		print(Global.score)
-
 		queue_free()
 	pass # Replace with function body.
 

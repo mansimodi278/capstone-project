@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://csheklyms4kis"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_b3njc"]
+[ext_resource type="Texture2D" uid="uid://bbgs2rftghcnw" path="res://Strawberry.png" id="2_lnxh1"]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_b3njc")
+
+[node name="lblScore" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 174.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 30
+text = "1000"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(22, 60)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_lnxh1")
+hframes = 17
