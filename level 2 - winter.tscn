@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ptcp4ttu04dy"]
+
+[ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="1_1llyf"]
+
+[node name="main winter" type="Node2D"]
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxLayer"]
+
+[node name="Killfloor" parent="." instance=ExtResource("1_1llyf")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
