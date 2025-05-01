@@ -13,7 +13,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/path = NodePath("../Sprite2d:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -30,7 +30,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/path = NodePath("../Sprite2d:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -43,11 +43,11 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_c1s4x"]
 resource_name = "jump"
 length = 13.0
-loop_mode = 2
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/path = NodePath("../Sprite2d:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -64,7 +64,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RedPandaSpriteSheet:frame")
+tracks/0/path = NodePath("../Sprite2d:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -102,11 +102,12 @@ libraries = {
 }
 speed_scale = 4.0
 
-[node name="RedPandaSpriteSheet" type="Sprite2D" parent="."]
+[node name="Sprite2d" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(366.667, -40)
 scale = Vector2(39.9147, 42.9296)
 texture = ExtResource("1_oduq5")
+flip_h = true
 hframes = 8
 vframes = 7
 
