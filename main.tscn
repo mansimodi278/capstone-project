@@ -445,7 +445,7 @@ sources/1 = SubResource("TileSetAtlasSource_a5807")
 sources/2 = SubResource("TileSetAtlasSource_60us6")
 sources/3 = SubResource("TileSetAtlasSource_5l62f")
 
-[node name="main summer" type="Node2D"]
+[node name="summer" type="Node2D"]
 script = ExtResource("1_4acse")
 
 [node name="GUI" parent="." instance=ExtResource("2_3gbb7")]
@@ -492,7 +492,7 @@ position = Vector2(-5023, 723)
 scale = Vector2(108.33, 1.7763)
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(453, 51)
+position = Vector2(-4754, 206)
 scale = Vector2(0.3, 0.3)
 
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]
