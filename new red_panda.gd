@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name RedPanda extends CharacterBody2D
 
 var jumping = false
 

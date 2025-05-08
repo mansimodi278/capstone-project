@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=22 format=4 uid="uid://itn6ibtinr2q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4acse"]
 [ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_3gbb7"]
@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dsb8psyn5bf78" path="res://YogePlatformerForest/SpriteSheet.png" id="7_38ict"]
 [ext_resource type="PackedScene" uid="uid://n5r7wdbcetys" path="res://strawberry.tscn" id="10_xykwb"]
 [ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="11_e5llp"]
-[ext_resource type="PackedScene" uid="uid://c202a2o5h8ffp" path="res://family_1.tscn" id="11_vkaed"]
 [ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="12_ovt1u"]
+[ext_resource type="Texture2D" uid="uid://cud6wh7smgnfl" path="res://Red Panda Sprite Sheet.png" id="13_0fgmp"]
 
 [sub_resource type="GDScript" id="GDScript_1qhmw"]
 resource_name = "camera"
@@ -476,6 +476,9 @@ func _on_pressed():
 	get_tree().change_scene_to_file(\"res://level 2 - winter.tscn\")
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1q17"]
+size = Vector2(130, 231.5)
+
 [node name="main summer" type="Node2D"]
 script = ExtResource("1_4acse")
 
@@ -540,13 +543,6 @@ position = Vector2(8067, -368)
 position = Vector2(-5023, 723)
 scale = Vector2(108.33, 1.7763)
 
-[node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(-4772, 191)
-scale = Vector2(0.3, 0.3)
-
-[node name="family 1" parent="." instance=ExtResource("11_vkaed")]
-position = Vector2(4175, -639)
-
 [node name="SchoonDatIkOnderT\'groen" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_ovt1u")
 volume_db = -30.0
@@ -563,5 +559,24 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_or7um")
 text = "Level 2"
 script = SubResource("GDScript_31b8m")
 
+[node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
+position = Vector2(4763, -330)
+scale = Vector2(0.3, 0.3)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="RedPandaSpriteSheet" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(5148.31, -119.562)
+scale = Vector2(10.0216, 17.4702)
+texture = ExtResource("13_0fgmp")
+region_enabled = true
+region_rect = Rect2(0, 16.31, 29.9806, 21.1249)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5197, -148)
+shape = SubResource("RectangleShape2D_l1q17")
+
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
