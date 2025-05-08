@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://n5r7wdbcetys"]
 
 [ext_resource type="Script" path="res://strawberry.gd" id="1_cao2o"]
-[ext_resource type="Texture2D" uid="uid://bbgs2rftghcnw" path="res://Strawberry.png" id="2_7fuet"]
+[ext_resource type="Texture2D" uid="uid://g2b7ghbaxxpo" path="res://Strawberry.png" id="2_7fuet"]
 [ext_resource type="AudioStream" uid="uid://dxxbbawg42r18" path="res://munchhh.mp3" id="3_mie4v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cte3"]

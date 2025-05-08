@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://csheklyms4kis"]
 
 [ext_resource type="Script" path="res://gui.gd" id="1_b3njc"]
-[ext_resource type="Texture2D" uid="uid://bbgs2rftghcnw" path="res://Strawberry.png" id="2_lnxh1"]
+[ext_resource type="Texture2D" uid="uid://g2b7ghbaxxpo" path="res://Strawberry.png" id="2_lnxh1"]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_b3njc")
@@ -11,6 +11,7 @@ offset_left = 42.0
 offset_top = 40.0
 offset_right = 174.0
 offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "1000"
 

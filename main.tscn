@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=21 format=4 uid="uid://itn6ibtinr2q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_4acse"]
 [ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_3gbb7"]
@@ -12,7 +12,17 @@
 [ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="11_e5llp"]
 [ext_resource type="PackedScene" uid="uid://c202a2o5h8ffp" path="res://family_1.tscn" id="11_vkaed"]
 [ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="12_ovt1u"]
-[ext_resource type="PackedScene" uid="uid://d27jo2dwcjtob" path="res://next_level.tscn" id="13_r8le3"]
+
+[sub_resource type="GDScript" id="GDScript_1qhmw"]
+resource_name = "camera"
+script/source = "extends Camera2D
+
+@export var player: Node2D  # drag your player into this in the editor
+
+func _process(delta):
+	if player:
+		global_position.x = player.global_position.x
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hql18"]
 texture = ExtResource("3_0humg")
@@ -448,8 +458,32 @@ sources/1 = SubResource("TileSetAtlasSource_a5807")
 sources/2 = SubResource("TileSetAtlasSource_60us6")
 sources/3 = SubResource("TileSetAtlasSource_5l62f")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or7um"]
+bg_color = Color(0.69801, 0.663731, 0.822014, 1)
+
+[sub_resource type="GDScript" id="GDScript_31b8m"]
+resource_name = "next_level"
+script/source = "extends Button
+
+func _ready() -> void:
+	pass
+
+func _process(delta: float) -> void:
+	pass
+
+func _on_pressed():
+	print(\"Now loading level 2 - winter\")
+	get_tree().change_scene_to_file(\"res://level 2 - winter.tscn\")
+"
+
 [node name="main summer" type="Node2D"]
 script = ExtResource("1_4acse")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+offset = Vector2(0, 200)
+zoom = Vector2(0.45, 0.45)
+script = SubResource("GDScript_1qhmw")
+player = NodePath("../red panda")
 
 [node name="GUI" parent="." instance=ExtResource("2_3gbb7")]
 
@@ -463,7 +497,7 @@ repeat_size = Vector2(2299, 0)
 repeat_times = 5
 
 [node name="background" type="Sprite2D" parent="Parallax/ParallaxLayer"]
-position = Vector2(819, 106)
+position = Vector2(794, 127)
 texture = ExtResource("3_7j5r1")
 
 [node name="platforms" type="TileMapLayer" parent="."]
@@ -507,18 +541,27 @@ position = Vector2(-5023, 723)
 scale = Vector2(108.33, 1.7763)
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(4670, -297)
+position = Vector2(-4772, 191)
 scale = Vector2(0.3, 0.3)
 
 [node name="family 1" parent="." instance=ExtResource("11_vkaed")]
-position = Vector2(4696, -517)
+position = Vector2(4175, -639)
 
 [node name="SchoonDatIkOnderT\'groen" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_ovt1u")
 volume_db = -30.0
 autoplay = true
 
-[node name="next_level" parent="." instance=ExtResource("13_r8le3")]
-position = Vector2(4684, -539)
+[node name="Button" type="Button" parent="."]
+offset_left = 5596.0
+offset_top = -74.0
+offset_right = 5754.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.656009, 0.362109, 2.88785e-07, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_or7um")
+text = "Level 2"
+script = SubResource("GDScript_31b8m")
 
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

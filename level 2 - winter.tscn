@@ -1,20 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://ptcp4ttu04dy"]
+[gd_scene load_steps=6 format=3 uid="uid://ptcp4ttu04dy"]
 
 [ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="1_1llyf"]
 [ext_resource type="Script" path="res://level_2___winter.gd" id="1_xcjxk"]
+[ext_resource type="Texture2D" uid="uid://bndittolt7ol" path="res://Seasonal Tilesets-2/Background parts/3 - Big_mountain_BG.png" id="2_e4spi"]
+[ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_lfo2b"]
+[ext_resource type="Texture2D" uid="uid://bges3flx7g4ok" path="res://Seasonal Tilesets-2/Background parts/2 - Smaller_mountains.png" id="3_v027x"]
 
 [node name="main winter" type="Node2D"]
 script = ExtResource("1_xcjxk")
-level_number = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-182, 706)
+offset = Vector2(0, 200)
+zoom = Vector2(0.45, 0.45)
+
+[node name="GUI" parent="." instance=ExtResource("2_lfo2b")]
 
 [node name="Parallax" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax"]
+[node name="ParallaxLayer" type="Parallax2D" parent="Parallax"]
+scroll_offset = Vector2(-140, -14)
+repeat_size = Vector2(1593, 0)
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxLayer"]
+position = Vector2(612.25, 256.75)
+scale = Vector2(5.5434, 4.22356)
+texture = ExtResource("2_e4spi")
 
-[node name="Killfloor" parent="." instance=ExtResource("1_1llyf")]
+[node name="2-SmallerMountains" type="Sprite2D" parent="Parallax/ParallaxLayer"]
+position = Vector2(610.75, 349)
+scale = Vector2(5.52951, 3.39423)
+texture = ExtResource("3_v027x")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Killfloor" parent="." instance=ExtResource("1_1llyf")]
+position = Vector2(-182, 706)
