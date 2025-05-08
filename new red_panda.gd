@@ -3,7 +3,7 @@ class_name RedPanda extends CharacterBody2D
 var jumping = false
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -900.0
+const JUMP_VELOCITY = -866.0
 
 
 func _physics_process(delta: float) -> void:
