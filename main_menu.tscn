@@ -1,23 +1,105 @@
-[gd_scene format=3 uid="uid://qnd5hkv58in4"]
+[gd_scene load_steps=6 format=3 uid="uid://bp1tohds7ud0m"]
+
+[ext_resource type="Texture2D" uid="uid://kjjaybs8kdh8" path="res://Blue Black Modern Simple Letter B Logo Design.jpg" id="1_7kd75"]
+[ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="2_xbr75"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_beuw3"]
+texture = ExtResource("1_7kd75")
+modulate_color = Color(1, 0.917647, 1, 0.607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hn4m"]
+bg_color = Color(0.647059, 0.25098, 0.309804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40kbl"]
+bg_color = Color(0.647059, 0.25098, 0.309804, 1)
 
 [node name="main menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_beuw3")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.659
+anchor_top = -0.154
+anchor_right = 0.659
+anchor_bottom = -0.154
+offset_left = -258.816
+offset_top = 254.4
+offset_right = -8.81604
+offset_bottom = 381.4
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
 
-[node name="Start Button" type="Button" parent="VBoxContainer"]
+[node name="Play" type="Button" parent="."]
 layout_mode = 2
+anchor_left = -0.01
+anchor_right = -0.01
+offset_left = 375.24
+offset_top = 448.0
+offset_right = 625.24
+offset_bottom = 479.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
+text = "Options
+"
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
 layout_mode = 2
+offset_left = 365.0
+offset_top = 496.0
+offset_right = 615.0
+offset_bottom = 527.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_40kbl")
+text = "Quit
+"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="."]
 layout_mode = 2
+anchor_left = 0.164
+anchor_top = -0.141
+anchor_right = 0.164
+anchor_bottom = -0.141
+offset_left = 197.064
+offset_top = 486.6
+offset_right = 447.064
+offset_bottom = 517.6
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
+text = "Play
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -274.0
+offset_top = 17.0
+offset_right = 279.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xbr75")
+theme_override_font_sizes/font_size = 60
+text = "Panda  Rush
+"

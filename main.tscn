@@ -492,7 +492,7 @@ position = Vector2(-5023, 723)
 scale = Vector2(108.33, 1.7763)
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
-position = Vector2(453, 51)
+position = Vector2(-4893, 207)
 scale = Vector2(0.3, 0.3)
 
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]
