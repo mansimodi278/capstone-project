@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ptcp4ttu04dy"]
+[gd_scene load_steps=2 format=3 uid="uid://dehbtnn8m36wc"]
 
-[ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="1_1llyf"]
-[ext_resource type="Script" path="res://level_2___winter.gd" id="1_xcjxk"]
+[ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="2_dtx3j"]
 
 [node name="main winter" type="Node2D"]
-script = ExtResource("1_xcjxk")
-level_number = 2
 
 [node name="Parallax" type="Node2D" parent="."]
 
@@ -15,6 +12,6 @@ level_number = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxLayer"]
 
-[node name="Killfloor" parent="." instance=ExtResource("1_1llyf")]
+[node name="Killfloor" parent="." instance=ExtResource("2_dtx3j")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

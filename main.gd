@@ -20,3 +20,5 @@ func _on_KillZone_body_entered(body: Node2D) -> void:
 func game_over(body: Node2D) -> void:
 	print("GAME OVER TRIGGERED")
 	get_tree().call_deferred("reload_current_scene")
+	
+	

@@ -1,21 +1,20 @@
-[gd_scene load_steps=19 format=4 uid="uid://itn6ibtinr2q"]
+[gd_scene load_steps=18 format=4 uid="uid://bl3irnu283fx"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_4acse"]
-[ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_3gbb7"]
-[ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_pbdhr"]
-[ext_resource type="Texture2D" uid="uid://ct0fx7cirmgqs" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/Platformer_Tileset_1.png" id="3_0humg"]
-[ext_resource type="Texture2D" uid="uid://bcbm1s2bs67bc" path="res://summer2.png" id="3_7j5r1"]
-[ext_resource type="Texture2D" uid="uid://byk7ppqfcdvqx" path="res://Seasonal Tilesets-2/1 - Grassland/Grassland_entities (16 x 16).png" id="6_0agbr"]
-[ext_resource type="Texture2D" uid="uid://oqr2lm73f8vm" path="res://Seasonal Tilesets-2/1 - Grassland/Extra_plants (16 x 16).png" id="6_0yxdu"]
-[ext_resource type="Texture2D" uid="uid://dsb8psyn5bf78" path="res://YogePlatformerForest/SpriteSheet.png" id="7_38ict"]
-[ext_resource type="PackedScene" uid="uid://n5r7wdbcetys" path="res://strawberry.tscn" id="10_xykwb"]
-[ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="11_e5llp"]
-[ext_resource type="PackedScene" uid="uid://c202a2o5h8ffp" path="res://family_1.tscn" id="11_vkaed"]
-[ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="12_ovt1u"]
-[ext_resource type="PackedScene" uid="uid://d27jo2dwcjtob" path="res://next_level.tscn" id="13_r8le3"]
+[ext_resource type="Script" path="res://main.gd" id="1_4br5x"]
+[ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_wcxqg"]
+[ext_resource type="Texture2D" uid="uid://bcbm1s2bs67bc" path="res://summer2.png" id="3_prl6k"]
+[ext_resource type="Texture2D" uid="uid://ct0fx7cirmgqs" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/Platformer_Tileset_1.png" id="4_4px1w"]
+[ext_resource type="Texture2D" uid="uid://byk7ppqfcdvqx" path="res://Seasonal Tilesets-2/1 - Grassland/Grassland_entities (16 x 16).png" id="5_dmi0k"]
+[ext_resource type="Texture2D" uid="uid://oqr2lm73f8vm" path="res://Seasonal Tilesets-2/1 - Grassland/Extra_plants (16 x 16).png" id="6_0yg34"]
+[ext_resource type="Texture2D" uid="uid://dsb8psyn5bf78" path="res://YogePlatformerForest/SpriteSheet.png" id="7_a3vrk"]
+[ext_resource type="PackedScene" uid="uid://n5r7wdbcetys" path="res://strawberry.tscn" id="8_inxsl"]
+[ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="9_ogri0"]
+[ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="10_8a2va"]
+[ext_resource type="PackedScene" uid="uid://c202a2o5h8ffp" path="res://family_1.tscn" id="11_ax2xj"]
+[ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="12_kqa7b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hql18"]
-texture = ExtResource("3_0humg")
+texture = ExtResource("4_4px1w")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -113,7 +112,7 @@ texture = ExtResource("3_0humg")
 9:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a5807"]
-texture = ExtResource("6_0agbr")
+texture = ExtResource("5_dmi0k")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -163,7 +162,7 @@ texture = ExtResource("6_0agbr")
 18:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_60us6"]
-texture = ExtResource("6_0yxdu")
+texture = ExtResource("6_0yg34")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -183,7 +182,7 @@ texture = ExtResource("6_0yxdu")
 8:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l62f"]
-texture = ExtResource("7_38ict")
+texture = ExtResource("7_a3vrk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -449,9 +448,9 @@ sources/2 = SubResource("TileSetAtlasSource_60us6")
 sources/3 = SubResource("TileSetAtlasSource_5l62f")
 
 [node name="main summer" type="Node2D"]
-script = ExtResource("1_4acse")
+script = ExtResource("1_4br5x")
 
-[node name="GUI" parent="." instance=ExtResource("2_3gbb7")]
+[node name="GUI" parent="." instance=ExtResource("2_wcxqg")]
 
 [node name="Parallax" type="Node2D" parent="."]
 
@@ -464,7 +463,7 @@ repeat_times = 5
 
 [node name="background" type="Sprite2D" parent="Parallax/ParallaxLayer"]
 position = Vector2(819, 106)
-texture = ExtResource("3_7j5r1")
+texture = ExtResource("3_prl6k")
 
 [node name="platforms" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -476,49 +475,46 @@ tile_set = SubResource("TileSet_i8hrk")
 [node name="Collecting" type="Node2D" parent="."]
 position = Vector2(-4818, -92)
 
-[node name="strawberry" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry" parent="Collecting" instance=ExtResource("8_inxsl")]
 
-[node name="strawberry2" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry2" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(766, -103)
 
-[node name="strawberry3" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry3" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(1632, -42)
 
-[node name="strawberry4" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry4" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(4716, -140)
 
-[node name="strawberry5" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry5" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(2697, -362)
 
-[node name="strawberry6" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry6" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(4026, -86)
 
-[node name="strawberry7" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry7" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(6380, -337)
 
-[node name="strawberry8" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry8" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(7294, 149)
 
-[node name="strawberry9" parent="Collecting" instance=ExtResource("10_xykwb")]
+[node name="strawberry9" parent="Collecting" instance=ExtResource("8_inxsl")]
 position = Vector2(8067, -368)
 
-[node name="Killfloor" parent="." instance=ExtResource("11_e5llp")]
+[node name="Killfloor" parent="." instance=ExtResource("9_ogri0")]
 position = Vector2(-5023, 723)
 scale = Vector2(108.33, 1.7763)
 
-[node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
+[node name="red panda" parent="." instance=ExtResource("10_8a2va")]
 position = Vector2(4670, -297)
 scale = Vector2(0.3, 0.3)
 
-[node name="family 1" parent="." instance=ExtResource("11_vkaed")]
+[node name="family 1" parent="." instance=ExtResource("11_ax2xj")]
 position = Vector2(4696, -517)
 
 [node name="SchoonDatIkOnderT\'groen" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_ovt1u")
+stream = ExtResource("12_kqa7b")
 volume_db = -30.0
 autoplay = true
-
-[node name="next_level" parent="." instance=ExtResource("13_r8le3")]
-position = Vector2(4684, -539)
 
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]

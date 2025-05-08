@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://c202a2o5h8ffp"]
+
+[ext_resource type="Texture2D" uid="uid://cud6wh7smgnfl" path="res://Red Panda Sprite Sheet.png" id="1_16o6b"]
+
+[sub_resource type="GDScript" id="GDScript_j30fe"]
+script/source = "extends Area2D
+
+signal red_panda_found
+
+func _on_body_entered(body):
+	if body.name == \"red panda\" or body.name == \"RedPanda\":
+		emit_signal(\"red_panda_found\")
+		queue_free()
+		
+		
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_356yw"]
+atlas = ExtResource("1_16o6b")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njx5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_356yw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcw66"]
+size = Vector2(144, 231.5)
+
+[node name="family 1" type="Area2D"]
+collision_mask = 0
+script = SubResource("GDScript_j30fe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(969, 290)
+scale = Vector2(11.5625, 19.4375)
+sprite_frames = SubResource("SpriteFrames_njx5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1000, 485)
+shape = SubResource("RectangleShape2D_pcw66")
