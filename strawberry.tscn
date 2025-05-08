@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://n5r7wdbcetys"]
+[gd_scene load_steps=22 format=3 uid="uid://n5r7wdbcetys"]
 
 [ext_resource type="Script" path="res://strawberry.gd" id="1_cao2o"]
 [ext_resource type="Texture2D" uid="uid://bbgs2rftghcnw" path="res://Strawberry.png" id="2_7fuet"]
@@ -71,10 +71,6 @@ region = Rect2(448, 0, 32, 32)
 atlas = ExtResource("2_7fuet")
 region = Rect2(480, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fg4aq"]
-atlas = ExtResource("2_7fuet")
-region = Rect2(512, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_0bxs6"]
 animations = [{
 "frames": [{
@@ -128,9 +124,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aymar")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fg4aq")
 }],
 "loop": true,
 "name": &"moving ",
@@ -147,11 +140,12 @@ script = ExtResource("1_cao2o")
 light_mask = 0
 visibility_layer = 7
 texture_filter = 1
-position = Vector2(544, 346.5)
-scale = Vector2(4.75, 4.90625)
+position = Vector2(544, 347.5)
+scale = Vector2(4.75, 4.96875)
 sprite_frames = SubResource("SpriteFrames_0bxs6")
 animation = &"moving "
-frame_progress = 0.173787
+autoplay = "moving "
+frame_progress = 0.855352
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(549, 346)
