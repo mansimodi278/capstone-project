@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp1tohds7ud0m"]
+[gd_scene load_steps=7 format=3 uid="uid://bp1tohds7ud0m"]
 
 [ext_resource type="Texture2D" uid="uid://kjjaybs8kdh8" path="res://Blue Black Modern Simple Letter B Logo Design.jpg" id="1_7kd75"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_xlu17"]
 [ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="2_xbr75"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_beuw3"]
 texture = ExtResource("1_7kd75")
-modulate_color = Color(1, 0.917647, 1, 0.607843)
+modulate_color = Color(1, 0.917647, 1, 0.890196)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hn4m"]
 bg_color = Color(0.647059, 0.25098, 0.309804, 1)
@@ -21,6 +22,7 @@ anchor_bottom = 1.0
 offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xlu17")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -55,10 +57,27 @@ theme_override_constants/separation = 17
 layout_mode = 2
 anchor_left = -0.01
 anchor_right = -0.01
-offset_left = 375.24
-offset_top = 448.0
-offset_right = 625.24
-offset_bottom = 479.0
+offset_left = 372.28
+offset_top = 445.0
+offset_right = 627.28
+offset_bottom = 476.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
+text = "Play
+"
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = 90.0
+offset_right = 85.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
 text = "Options
 "
@@ -73,33 +92,24 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_40kbl")
 text = "Quit
 "
 
-[node name="Options" type="Button" parent="."]
-layout_mode = 2
-anchor_left = 0.164
-anchor_top = -0.141
-anchor_right = 0.164
-anchor_bottom = -0.141
-offset_left = 197.064
-offset_top = 486.6
-offset_right = 447.064
-offset_bottom = 517.6
-theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
-text = "Play
-"
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -274.0
-offset_top = 17.0
-offset_right = 279.0
-offset_bottom = 17.0
+offset_left = -234.0
+offset_top = 24.0
+offset_right = 319.0
+offset_bottom = -498.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.992157)
 theme_override_fonts/font = ExtResource("2_xbr75")
 theme_override_font_sizes/font_size = 60
-text = "Panda  Rush
+text = "Panda Rush
 "
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_settings_pressed"]
