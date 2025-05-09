@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://745n5tedd8r3"]
+[gd_scene load_steps=8 format=3 uid="uid://745n5tedd8r3"]
 
 [ext_resource type="Script" path="res://tutorial.gd" id="1_rrt1o"]
 [ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="2_t3osy"]
 [ext_resource type="Texture2D" uid="uid://dxgpwdhvo4xbk" path="res://pixelmix/three red.jpeg" id="3_cmr0o"]
+[ext_resource type="Texture2D" uid="uid://c8187j3rog25w" path="res://pixelmix/bluuuuu.png" id="4_q3on4"]
 
 [sub_resource type="Theme" id="Theme_h4y17"]
 
@@ -10,7 +11,7 @@
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nylw"]
-bg_color = Color(0.886275, 0.478431, 0.231373, 1)
+bg_color = Color(0.745098, 0.278431, 0.2, 1)
 border_color = Color(0, 0, 0, 1)
 
 [node name="tutorial" type="Control"]
@@ -38,18 +39,17 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qka7m")
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 2
-anchor_left = 0.06
-anchor_top = 0.579
-anchor_right = 0.964
-anchor_bottom = 0.812
-offset_left = -0.120003
-offset_top = 0.0799866
-offset_right = -4.52808
-offset_bottom = 0.23999
-theme_override_colors/font_color = Color(1, 1, 1, 0)
+anchor_left = 0.135
+anchor_top = 0.589
+anchor_right = 1.056
+anchor_bottom = 0.84
+offset_left = -0.520004
+offset_top = -5.72
+offset_right = -8.51196
+offset_bottom = 11.8
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_t3osy")
-theme_override_font_sizes/font_size = 17
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_7nylw")
 text = " 
  Use arrow keys to move and jump across platforms. 
@@ -61,6 +61,25 @@ text = "
 "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1016, 148)
+texture_filter = 1
+position = Vector2(79, 315)
 scale = Vector2(0.632729, 0.728584)
 texture = ExtResource("3_cmr0o")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(379, 96)
+scale = Vector2(0.336982, 0.291555)
+texture = ExtResource("4_q3on4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(868, 132)
+scale = Vector2(0.336982, 0.291555)
+texture = ExtResource("4_q3on4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(616, 102)
+scale = Vector2(0.461118, 0.518432)
+texture = ExtResource("4_q3on4")
