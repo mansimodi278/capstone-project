@@ -32,7 +32,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 197.0
-offset_top = 25.0
+offset_top = -2.0
 offset_right = -175.0
 offset_bottom = 12.0
 grow_horizontal = 2
@@ -42,90 +42,125 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_beuw3")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.337
-anchor_top = 0.628
-anchor_right = 0.556
-anchor_bottom = 0.806
-offset_left = -0.572021
-offset_top = 0.0560303
-offset_right = 0.263916
-offset_bottom = 5.71198
+anchor_left = 0.412
+anchor_top = 0.642
+anchor_right = 0.578
+anchor_bottom = 0.965
+offset_left = -0.568024
+offset_top = -0.160004
+offset_right = 0.208008
+offset_bottom = -0.200012
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 17
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 2
-anchor_left = 0.388
-anchor_top = 0.596
-anchor_right = 0.606
-anchor_bottom = 0.675
-offset_left = 0.367981
-offset_top = -4.08002
-offset_right = 0.359985
-theme_override_font_sizes/font_size = 30
+anchor_left = 0.414
+anchor_top = 0.642
+anchor_right = 0.577
+anchor_bottom = 0.729
+offset_left = -2.89603
+offset_top = -0.160004
+offset_right = 0.371948
+offset_bottom = 0.0799866
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
 text = "Play
 "
 
 [node name="ColorRect" type="ColorRect" parent="Play"]
-layout_mode = 0
-offset_left = 535.0
-offset_top = -272.0
-offset_right = 722.0
-offset_bottom = 219.0
-
-[node name="Options" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.391
-anchor_top = 0.708
-anchor_right = 0.61
-anchor_bottom = 0.796
-offset_left = -0.124023
-offset_top = 0.160004
-offset_right = -0.288086
-offset_bottom = -0.0800171
+anchor_left = 2.642
+anchor_top = -7.381
+anchor_right = 3.601
+anchor_bottom = 4.405
+offset_left = 0.0939636
+offset_top = 0.00201416
+offset_right = 0.00695801
+offset_bottom = -1.01001
+color = Color(0.878431, 0.823529, 0.87451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.037
+anchor_top = -6.119
+anchor_right = 2.735
+anchor_bottom = 5.024
+offset_left = -870.141
+offset_top = -53.002
+offset_right = -809.761
+offset_bottom = -97.008
+color = Color(0.505882, 0.647059, 0.760784, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.461
+anchor_top = 2.595
+anchor_right = -1.466
+anchor_bottom = 4.429
+offset_left = -0.026947
+offset_top = 0.0100021
+offset_right = -0.0619812
+offset_bottom = -0.0180206
+color = Color(0.494118, 0.501961, 0.313726, 1)
+
+[node name="Tutorial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.412
+anchor_top = 0.752
+anchor_right = 0.58
+anchor_bottom = 0.84
+offset_left = -0.568024
+offset_top = 0.039978
+offset_right = -3.12006
+offset_bottom = -0.200012
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_2hn4m")
-text = "Options
+text = "Tutorial
 "
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 2
-anchor_left = 0.389
-anchor_top = 0.837
-anchor_right = 0.609
-anchor_bottom = 0.921
-offset_left = 0.203979
-offset_top = -1.76001
-offset_right = -0.116028
-offset_bottom = -0.0800171
-theme_override_font_sizes/font_size = 30
+anchor_left = 0.411
+anchor_top = 0.888
+anchor_right = 0.578
+anchor_bottom = 0.965
+offset_left = -0.404022
+offset_top = -5.24002
+offset_right = 0.208008
+offset_bottom = -0.200012
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_40kbl")
 text = "Quit
 "
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -186.0
-offset_top = 15.0
-offset_right = 367.0
-offset_bottom = -405.0
+anchors_preset = -1
+anchor_left = 0.373
+anchor_top = 0.033
+anchor_right = 0.626
+anchor_bottom = 0.158
+offset_left = -0.172028
+offset_top = 0.16
+offset_right = 0.335938
+offset_bottom = -12.84
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0.992157)
 theme_override_fonts/font = ExtResource("2_xbr75")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 text = "Panda Rush
 "
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
