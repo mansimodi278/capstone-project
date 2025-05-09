@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6hohxmy1jpa5"
-path="res://.godot/imported/Grass16.png-ded319ced05c459bcd6708f9190df8aa.ctex"
+uid="uid://ku40ntxq8gr5"
+path="res://.godot/imported/Grass16.png-44c23be61e20e0c9158e58c1ba70bee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/Grass16.png"
-dest_files=["res://.godot/imported/Grass16.png-ded319ced05c459bcd6708f9190df8aa.ctex"]
+source_file="res://YogePlatformerForest/Sprites/Grass16.png"
+dest_files=["res://.godot/imported/Grass16.png-44c23be61e20e0c9158e58c1ba70bee1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qq6ih5d4jcwb"
-path="res://.godot/imported/BigRock.png-b226b165f4db05fef4be24b24ecd3888.ctex"
+uid="uid://etqo44b0agd"
+path="res://.godot/imported/BigRock.png-9b897cf739252d0751b3328293dfa536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/BigRock.png"
-dest_files=["res://.godot/imported/BigRock.png-b226b165f4db05fef4be24b24ecd3888.ctex"]
+source_file="res://YogePlatformerForest/Sprites/BigRock.png"
+dest_files=["res://.godot/imported/BigRock.png-9b897cf739252d0751b3328293dfa536.ctex"]
 
 [params]
 

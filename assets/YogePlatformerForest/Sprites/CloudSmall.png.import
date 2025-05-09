@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gfl7ygqy5irs"
-path="res://.godot/imported/CloudSmall.png-d01eb13c890df5cf444cdbaecf7c4a4e.ctex"
+uid="uid://cchxgyryhw18p"
+path="res://.godot/imported/CloudSmall.png-052f43d1c870392f30fcdfa654cedb3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/CloudSmall.png"
-dest_files=["res://.godot/imported/CloudSmall.png-d01eb13c890df5cf444cdbaecf7c4a4e.ctex"]
+source_file="res://YogePlatformerForest/Sprites/CloudSmall.png"
+dest_files=["res://.godot/imported/CloudSmall.png-052f43d1c870392f30fcdfa654cedb3f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1uyet0tuj2s5"
-path="res://.godot/imported/BackTree1.png-dd2a0d90d8aa0f52aa50763e3bd22102.ctex"
+uid="uid://df80x05b7o4r"
+path="res://.godot/imported/BackTree1.png-2abe9bc50b0ff4c93f232f7a6fd63765.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/BackTree1.png"
-dest_files=["res://.godot/imported/BackTree1.png-dd2a0d90d8aa0f52aa50763e3bd22102.ctex"]
+source_file="res://YogePlatformerForest/Sprites/BackTree1.png"
+dest_files=["res://.godot/imported/BackTree1.png-2abe9bc50b0ff4c93f232f7a6fd63765.ctex"]
 
 [params]
 

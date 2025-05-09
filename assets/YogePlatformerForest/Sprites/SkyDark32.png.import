@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccpx61dsv5hkc"
-path="res://.godot/imported/SkyDark32.png-ccf40259cc3179d1c79e96f23e2a3abe.ctex"
+uid="uid://cy8w617va8nbx"
+path="res://.godot/imported/SkyDark32.png-ba5e5ce670628761f3c41dc83ebf057d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/SkyDark32.png"
-dest_files=["res://.godot/imported/SkyDark32.png-ccf40259cc3179d1c79e96f23e2a3abe.ctex"]
+source_file="res://YogePlatformerForest/Sprites/SkyDark32.png"
+dest_files=["res://.godot/imported/SkyDark32.png-ba5e5ce670628761f3c41dc83ebf057d.ctex"]
 
 [params]
 

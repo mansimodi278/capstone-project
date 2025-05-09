@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0e2s2anmkdpk"
-path="res://.godot/imported/GroundTile16.png-59f6326a76a3d518848c1f526436227b.ctex"
+uid="uid://b4n880npaakar"
+path="res://.godot/imported/GroundTile16.png-afa2e79c58957e0d44aaa5cf506a7529.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/GroundTile16.png"
-dest_files=["res://.godot/imported/GroundTile16.png-59f6326a76a3d518848c1f526436227b.ctex"]
+source_file="res://YogePlatformerForest/Sprites/GroundTile16.png"
+dest_files=["res://.godot/imported/GroundTile16.png-afa2e79c58957e0d44aaa5cf506a7529.ctex"]
 
 [params]
 

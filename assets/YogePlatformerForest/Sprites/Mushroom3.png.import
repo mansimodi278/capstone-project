@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c50jjnjfvvdbj"
-path="res://.godot/imported/Mushroom3.png-feca549c03dca56ce762a99bc51b4362.ctex"
+uid="uid://cjftq8lw0hcdx"
+path="res://.godot/imported/Mushroom3.png-32d43d599771018c44eea6e6e832405d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/Mushroom3.png"
-dest_files=["res://.godot/imported/Mushroom3.png-feca549c03dca56ce762a99bc51b4362.ctex"]
+source_file="res://YogePlatformerForest/Sprites/Mushroom3.png"
+dest_files=["res://.godot/imported/Mushroom3.png-32d43d599771018c44eea6e6e832405d.ctex"]
 
 [params]
 

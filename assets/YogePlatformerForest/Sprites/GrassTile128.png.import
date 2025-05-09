@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c37dp36srdeb1"
-path="res://.godot/imported/GrassTile128.png-ac73d15b2365143a26594b283deab176.ctex"
+uid="uid://bp6f7rkd5fuhn"
+path="res://.godot/imported/GrassTile128.png-304698032d71a79986311dd00055a45f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/YogePlatformerForest/Sprites/GrassTile128.png"
-dest_files=["res://.godot/imported/GrassTile128.png-ac73d15b2365143a26594b283deab176.ctex"]
+source_file="res://YogePlatformerForest/Sprites/GrassTile128.png"
+dest_files=["res://.godot/imported/GrassTile128.png-304698032d71a79986311dd00055a45f.ctex"]
 
 [params]
 
