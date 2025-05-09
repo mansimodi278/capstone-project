@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://745n5tedd8r3"]
+[gd_scene load_steps=9 format=3 uid="uid://745n5tedd8r3"]
 
 [ext_resource type="Script" path="res://tutorial.gd" id="1_rrt1o"]
 [ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="2_t3osy"]
 [ext_resource type="Texture2D" uid="uid://dxgpwdhvo4xbk" path="res://pixelmix/three red.jpeg" id="3_cmr0o"]
 [ext_resource type="Texture2D" uid="uid://c8187j3rog25w" path="res://pixelmix/bluuuuu.png" id="4_q3on4"]
+[ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="5_l4r4n"]
 
 [sub_resource type="Theme" id="Theme_h4y17"]
 
@@ -54,9 +55,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_7nylw")
 text = " 
  Use arrow keys to move and jump across platforms. 
 
- Collect red panda family members scattered throughout the levels. 
+ Get through the summer level and meet with red panda dad.
 
- Explore both summer and winter worlds to reunite the family and complete the journey.
+ Explore both summer winter worlds to reunite the family and complete the journey.
 
 "
 
@@ -83,3 +84,7 @@ texture_filter = 1
 position = Vector2(616, 102)
 scale = Vector2(0.461118, 0.518432)
 texture = ExtResource("4_q3on4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_l4r4n")
+autoplay = true

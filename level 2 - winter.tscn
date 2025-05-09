@@ -301,7 +301,7 @@ sources/0 = SubResource("TileSetAtlasSource_5ncq6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-182, 706)
-zoom = Vector2(2, 2)
+zoom = Vector2(0.22, 0.22)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 
