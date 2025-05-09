@@ -144,6 +144,7 @@ texture = ExtResource("3_6bx7g")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_vv8kr")
 autoplay = true
+stream_paused = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
