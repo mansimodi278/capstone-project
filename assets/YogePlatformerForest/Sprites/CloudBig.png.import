@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxjaswptyqrkk"
-path="res://.godot/imported/CloudBig.png-55c964694143b19fa53591ad472f3496.ctex"
+uid="uid://bddvfcox4hden"
+path="res://.godot/imported/CloudBig.png-49b4f1f0e89ddb28b85328fec00ccb0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YogePlatformerForest/Sprites/CloudBig.png"
-dest_files=["res://.godot/imported/CloudBig.png-55c964694143b19fa53591ad472f3496.ctex"]
+source_file="res://assets/YogePlatformerForest/Sprites/CloudBig.png"
+dest_files=["res://.godot/imported/CloudBig.png-49b4f1f0e89ddb28b85328fec00ccb0b.ctex"]
 
 [params]
 

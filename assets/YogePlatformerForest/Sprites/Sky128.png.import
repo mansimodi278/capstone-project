@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmxqfmeja78a0"
-path="res://.godot/imported/Sky128.png-fe3e52064c38ae140f58d24292daf08c.ctex"
+uid="uid://djhwhrfjujbaa"
+path="res://.godot/imported/Sky128.png-7dbd18aa3f3015958a7b9466d40747f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YogePlatformerForest/Sprites/Sky128.png"
-dest_files=["res://.godot/imported/Sky128.png-fe3e52064c38ae140f58d24292daf08c.ctex"]
+source_file="res://assets/YogePlatformerForest/Sprites/Sky128.png"
+dest_files=["res://.godot/imported/Sky128.png-7dbd18aa3f3015958a7b9466d40747f6.ctex"]
 
 [params]
 

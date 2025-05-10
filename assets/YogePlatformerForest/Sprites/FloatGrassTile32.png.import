@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cprcij352e24j"
-path="res://.godot/imported/FloatGrassTile32.png-0056ef533a724a1205af3a7b49038615.ctex"
+uid="uid://dvsp8ix67ceiu"
+path="res://.godot/imported/FloatGrassTile32.png-07ae32b6d74e55ab9f5e4cf0899b1dee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YogePlatformerForest/Sprites/FloatGrassTile32.png"
-dest_files=["res://.godot/imported/FloatGrassTile32.png-0056ef533a724a1205af3a7b49038615.ctex"]
+source_file="res://assets/YogePlatformerForest/Sprites/FloatGrassTile32.png"
+dest_files=["res://.godot/imported/FloatGrassTile32.png-07ae32b6d74e55ab9f5e4cf0899b1dee.ctex"]
 
 [params]
 

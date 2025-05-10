@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd68yypfw122a"
-path="res://.godot/imported/Rock1.png-6fa2d6c0731e3c002d8e0da3b724d318.ctex"
+uid="uid://d4crn0ug5d81g"
+path="res://.godot/imported/Rock1.png-8c89a88931332eecc552068963c79824.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YogePlatformerForest/Sprites/Rock1.png"
-dest_files=["res://.godot/imported/Rock1.png-6fa2d6c0731e3c002d8e0da3b724d318.ctex"]
+source_file="res://assets/YogePlatformerForest/Sprites/Rock1.png"
+dest_files=["res://.godot/imported/Rock1.png-8c89a88931332eecc552068963c79824.ctex"]
 
 [params]
 

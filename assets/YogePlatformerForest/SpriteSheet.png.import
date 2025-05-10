@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsb8psyn5bf78"
-path="res://.godot/imported/SpriteSheet.png-58b58d4d08dabd4412cb76f329779e92.ctex"
+uid="uid://cufecfsrici8u"
+path="res://.godot/imported/SpriteSheet.png-884401a7b880460f9e80338f04e27af3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YogePlatformerForest/SpriteSheet.png"
-dest_files=["res://.godot/imported/SpriteSheet.png-58b58d4d08dabd4412cb76f329779e92.ctex"]
+source_file="res://assets/YogePlatformerForest/SpriteSheet.png"
+dest_files=["res://.godot/imported/SpriteSheet.png-884401a7b880460f9e80338f04e27af3.ctex"]
 
 [params]
 
