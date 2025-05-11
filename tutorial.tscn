@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://745n5tedd8r3"]
+[gd_scene load_steps=10 format=3 uid="uid://745n5tedd8r3"]
 
 [ext_resource type="Script" path="res://tutorial.gd" id="1_rrt1o"]
 [ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="2_t3osy"]
 [ext_resource type="Texture2D" uid="uid://dxgpwdhvo4xbk" path="res://pixelmix/three red.jpeg" id="3_cmr0o"]
 [ext_resource type="Texture2D" uid="uid://c8187j3rog25w" path="res://pixelmix/bluuuuu.png" id="4_q3on4"]
 [ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="5_l4r4n"]
+[ext_resource type="Script" path="res://button.gd" id="6_ex581"]
 
 [sub_resource type="Theme" id="Theme_h4y17"]
 
@@ -88,3 +89,15 @@ texture = ExtResource("4_q3on4")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_l4r4n")
 autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1062.0
+offset_top = 9.0
+offset_right = 1138.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_t3osy")
+text = "	Back"
+script = ExtResource("6_ex581")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
