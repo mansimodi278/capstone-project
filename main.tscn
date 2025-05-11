@@ -553,7 +553,7 @@ scale = Vector2(108.33, 1.7763)
 
 [node name="SchoonDatIkOnderT\'groen" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_ovt1u")
-volume_db = -30.0
+volume_db = -6.0
 autoplay = true
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
