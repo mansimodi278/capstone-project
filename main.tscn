@@ -582,7 +582,7 @@ offset_bottom = -364.0
 theme_override_fonts/font = ExtResource("13_8drtt")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_ogpss")
-text = "The red panda baby is finally home, safe in his dad's arms, where he belonged."
+text = "The red panda baby is finally home, safe in his dad's arms, where he belonged!"
 
 [connection signal="body_entered" from="Killfloor" to="." method="_on_KillZone_body_entered"]
 [connection signal="body_entered" from="skykillfloor" to="." method="_on_KillZone_body_entered"]
