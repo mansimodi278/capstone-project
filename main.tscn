@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_4acse"]
 [ext_resource type="PackedScene" uid="uid://csheklyms4kis" path="res://gui.tscn" id="2_3gbb7"]
+[ext_resource type="AudioStream" uid="uid://bvbrprlc5fcuh" path="res://pixelmix/ROCKSTAR_ Nadaan Parinde (Full Song)  Ranbir Kapoor  A. R. Rahman  Mohit Chauhan  Irshaad Kamil.mp3" id="2_otpyl"]
 [ext_resource type="PackedScene" uid="uid://dc2kuhpel4wvr" path="res://red_panda.tscn" id="2_pbdhr"]
 [ext_resource type="Texture2D" uid="uid://ct0fx7cirmgqs" path="res://Seasonal Tilesets-2/1 - Grassland/Background parts/Platformer_Tileset_1.png" id="3_0humg"]
 [ext_resource type="Texture2D" uid="uid://bcbm1s2bs67bc" path="res://summer2.png" id="3_7j5r1"]
@@ -10,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dsb8psyn5bf78" path="res://YogePlatformerForest/SpriteSheet.png" id="7_38ict"]
 [ext_resource type="PackedScene" uid="uid://n5r7wdbcetys" path="res://strawberry.tscn" id="10_xykwb"]
 [ext_resource type="PackedScene" uid="uid://bfu655p86ifn0" path="res://killfloor.tscn" id="11_e5llp"]
-[ext_resource type="AudioStream" uid="uid://c8kukylwajeyu" path="res://Schoon dat ik onder t'groen.mp3" id="12_ovt1u"]
 [ext_resource type="Texture2D" uid="uid://cud6wh7smgnfl" path="res://Red Panda Sprite Sheet.png" id="13_0fgmp"]
 [ext_resource type="FontFile" uid="uid://c2jur1b75guye" path="res://pixelmix/pixelmix.ttf" id="13_8drtt"]
 
@@ -468,6 +468,10 @@ bg_color = Color(0.835294, 0.47451, 0.258824, 1)
 [node name="main summer" type="Node2D"]
 script = ExtResource("1_4acse")
 
+[node name="RockstarNadaanParinde(fullSong)RanbirKapoorA_R_RahmanMohitChauhanIrshaadKamil" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_otpyl")
+autoplay = true
+
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 offset = Vector2(0, 200)
 zoom = Vector2(0.45, 0.45)
@@ -550,11 +554,6 @@ scale = Vector2(108.33, 1.7763)
 [node name="skykillfloor" parent="." instance=ExtResource("11_e5llp")]
 position = Vector2(-5060, -517)
 scale = Vector2(108.33, 1.7763)
-
-[node name="SchoonDatIkOnderT\'groen" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_ovt1u")
-volume_db = -6.0
-autoplay = true
 
 [node name="red panda" parent="." instance=ExtResource("2_pbdhr")]
 position = Vector2(-4762, 206)

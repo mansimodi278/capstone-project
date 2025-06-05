@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvbrprlc5fcuh"
+path="res://.godot/imported/ROCKSTAR_ Nadaan Parinde (Full Song)  Ranbir Kapoor  A. R. Rahman  Mohit Chauhan  Irshaad Kamil.mp3-3e1f0498d4f41b902ed8de519f181977.mp3str"
+
+[deps]
+
+source_file="res://pixelmix/ROCKSTAR_ Nadaan Parinde (Full Song)  Ranbir Kapoor  A. R. Rahman  Mohit Chauhan  Irshaad Kamil.mp3"
+dest_files=["res://.godot/imported/ROCKSTAR_ Nadaan Parinde (Full Song)  Ranbir Kapoor  A. R. Rahman  Mohit Chauhan  Irshaad Kamil.mp3-3e1f0498d4f41b902ed8de519f181977.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
